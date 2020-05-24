@@ -1,4 +1,5 @@
 body{
+font-family: 'Montserrat', sans-serif;
 --greadientangle: 45deg;
 --gradientcolor1: rgb(0, 217, 255);
 --gradientcolor2: rgba(171,0,255,1);
@@ -14,3 +15,38 @@ align-items: center;
 justify-content: center;
 min-height: 100vh;
 }
+
+/*#region Start*/
+.starttitle {
+margin-bottom: 20px;
+color: white;
+font-size: 40px;
+font-weight: 700;
+letter-spacing: -0.025em;
+}
+
+.startsubtitle {
+margin-bottom: 20px;
+color: white;
+font-size: 20px;
+}
+
+.startbutton{
+padding: 0.5rem;
+border-radius: 3px;
+border: 1px solid white;
+color: white;
+cursor: pointer;
+transition: 0.3s
+}
+
+.startbutton a{
+ font-weight: 600;
+}
+
+.startbutton:hover{
+background: white;
+color: rgb(0, 132, 255);
+
+}
+/*#endregion Start*/
