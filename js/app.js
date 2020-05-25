@@ -1,7 +1,8 @@
 let root = document.documentElement;
 var startdiv = null;
+var startbutton = null;
 
-var changebackground = function () { //Rotate and change the color
+var changebackground = function () { //Rotate and change the color of the background
     let root = document.documentElement;
     let angle = 45;
     let colour2R = 171;
@@ -27,16 +28,24 @@ var changebackground = function () { //Rotate and change the color
     requestAnimationFrame(tick)
 }
 
+var hidestartdiv = function () {
+    startdiv = document.getElementById("startdiv");
+    startbutton = document.getElementById("startbutton");
+    startbutton.disabled = true;
+    startdiv.style.opacity = 0 + '%';
+}
+
 var showregistrationform = function () {
     changebackground()
 }
 
 var getstarted = function () {
-    startdiv = document.getElementById('startdiv');
+    changebackground()
+    hidestartdiv()
 }
 
 var init = function () {
-    getstarted()
+
 }
 
 window.onload = init
