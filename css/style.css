@@ -22,10 +22,13 @@ min-height: 100vh;
 
 /*#region Start*/
 #startdiv{
+padding-left: 50px;
+padding-right: 50px;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+text-align: center;
 transition: 2s
 }
 

@@ -28,7 +28,7 @@ var changebackground = function () { //Rotate and change the color of the backgr
     requestAnimationFrame(tick)
 }
 
-var hidestartdiv = function () {
+var hidestartdiv = function () { //Disable the start button and fadeout the startdiv
     startdiv = document.getElementById("startdiv");
     startbutton = document.getElementById("startbutton");
     startbutton.disabled = true;
@@ -36,7 +36,7 @@ var hidestartdiv = function () {
 }
 
 var showregistrationform = function () {
-    changebackground()
+
 }
 
 var getstarted = function () {
