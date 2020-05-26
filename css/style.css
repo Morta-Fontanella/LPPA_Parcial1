@@ -95,9 +95,37 @@ margin: 30px;
 }
 
 .title h1{
+color: rgb(9, 15, 116);
 font-size: 40px;
 font-weight: 700;
 letter-spacing: -0.025em;
 }
 
 /*#endregion Registration Form*/
+
+/*#region Textbox*/
+
+.textbox{
+margin: 30px;
+display: flex;
+flex-direction: column;
+}
+
+.textbox p{
+color: rgb(9, 15, 116);
+font-size: 19px;
+letter-spacing: -0.025em;
+}
+
+.textbox input{
+margin: 2px;
+background: none;
+border: none;
+font-size: 19px;
+}
+
+.line{
+height: 2px;
+background: rgb(9, 15, 116);
+}
+/*#endregion Textbox*/
