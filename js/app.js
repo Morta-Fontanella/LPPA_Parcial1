@@ -1,7 +1,7 @@
 let root = document.documentElement;
 var startdiv = null;
 var startbutton = null;
-var registrationform = null;
+var name_console = null;
 
 var changebackground = function () { //Rotate and change the color of the background
     let root = document.documentElement;
@@ -10,8 +10,8 @@ var changebackground = function () { //Rotate and change the color of the backgr
     let colour2G = 0;
     let colour2B = 255;
     let tick = () => {
-        root.style.setProperty("--greadientangle", angle + "deg");
-        root.style.setProperty("--gradientcolour2", "rgb(" + colour2R + "," + colour2G + "," + colour2B + ")")
+        root.style.setProperty('--greadientangle', angle + 'deg');
+        root.style.setProperty('--gradientcolour2', 'rgb(' + colour2R + ',' + colour2G + ',' + colour2B + ')')
         if (angle < 220) {
             angle++;
         }
@@ -30,8 +30,8 @@ var changebackground = function () { //Rotate and change the color of the backgr
 }
 
 var hidestartdiv = function () { //Disable the start button and fadeout the startdiv
-    startdiv = document.getElementById("startdiv");
-    startbutton = document.getElementById("startbutton");
+    var startdiv = document.getElementById('startdiv');
+    startbutton = document.getElementById('startbutton');
     startbutton.disabled = true;
     startdiv.style.opacity = 0 + '%';
     startdiv.style.marginLeft = '800px';
@@ -40,16 +40,37 @@ var hidestartdiv = function () { //Disable the start button and fadeout the star
 }
 
 var showregistrationform = function () { //animation and fadein of registrationform 
-    registrationform = document.getElementById("divregistrationform");
+    var registrationform = document.getElementById('divregistrationform');
     registrationform.style.opacity = 100 + '%';
     registrationform.style.marginRight = '0px';
     registrationform.style.zIndex = 2;
 }
 
-var getstarted = function () {
+var getstarted = function () { //button get started funtions
     changebackground()
     hidestartdiv()
     showregistrationform()
+}
+
+//Validations
+var reseterror = function () {
+    var name_error = document.getElementById('name_error').style.display = 'none';
+    var prueba = document.getElementById('prueba').style.display = 'none';
+}
+
+var validatename = function () {//name validation
+    var name = document.getElementById('name');
+    if (name.value.length >= 3) {
+        name_console = name.value;
+    } else {
+        var name_error = document.getElementById('name_error');
+        name_error.style.display = 'flex';
+    }
+}
+
+var sumbit = function () {
+    reseterror();
+    validatename();
 }
 
 var init = function () {

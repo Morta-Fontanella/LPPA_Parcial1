@@ -116,8 +116,9 @@ background: rgb(9, 15, 116);
 
 .error{
 margin-left: 10px;
+font-size: 14px;
 color: red;
-display: flex;
+display: none;
 }
 
 .subtitle{
@@ -234,8 +235,6 @@ letter-spacing: -0.030em;
 }
 
 .country p{
-font-size: 19px;
-letter-spacing: -0.025em;
 margin-bottom: 10px;
 }
 /*#endregion Country*/
@@ -245,7 +244,7 @@ margin-bottom: 10px;
 .textarea{
 margin-left: 40px;
 margin-right: 40px;
-margin-bottom: 20px;
+margin-bottom: 15px;
 display: flex;
 flex-direction: column;
 }
@@ -272,6 +271,7 @@ width: 84%;
 padding: 0.5rem;
 border-radius: 3px;
 border: 1px solid rgb(6, 9, 63);
+font-family: 'Montserrat', sans-serif;
 color: rgb(6, 9, 63);
 background: rgba(255, 255, 255, 0);
 cursor: pointer;

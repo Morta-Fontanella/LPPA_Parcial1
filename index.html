@@ -30,42 +30,47 @@
                 <div class="title">
                     <h1>Registration</h1>
                 </div>
-                <div class="textbox" id="name">
+                <!-- Name -->
+                <div class="textbox">
                     <div class="subtitle">
                         <p>Name</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="name_error">*must be at least 3 characters</p>
                     </div>
-                    <input type="text">
+                    <input id="name" type="text">
                     <div class="line"></div>
-                </div>
-                <div class="textbox" id="surname">
+                </div>`
+                <!-- Surame -->
+                <div class="textbox">
                     <div class="subtitle">
                         <p>Surname</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="surname_error">*must be at least 3 characters</p>
                     </div>
-                    <input type="text">
+                    <input id="surname" type="text">
                     <div class="line"></div>
                 </div>
-                <div class="textbox" id="email">
+                <!-- Email -->
+                <div class="textbox">
                     <div class="subtitle">
                         <p>Email</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="email_error">*invalid email</p>
                     </div>
-                    <input type="email">
+                    <input id="email" type="email">
                     <div class="line"></div>
                 </div>
-                <div class="textbox" id="age">
+                <!-- Age -->
+                <div class="textbox">
                     <div class="subtitle">
                         <p>Age</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="age_error">*must be between 0 and 100</p>
                     </div>
-                    <input type="number">
+                    <input id="age" type="number">
                     <div class="line"></div>
                 </div>
+                <!-- Sex -->
                 <div class="sex">
                     <div class="subtitle">
                         <p>Sex</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="sex_error">*you must select one</p>
                     </div>
                     <div class="selectsex">
                         <label class="textsex">Male
@@ -79,10 +84,11 @@
                         </label>
                     </div>
                 </div>
+                <!-- Interest -->
                 <div class="interest">
                     <div class="subtitle">
                         <p>Areas of interest</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="error_interest">*you must select at least one</p>
                     </div>
                     <div class="selectinterest">
                         <label class="textinterest">Music
@@ -99,10 +105,11 @@
                         </label>
                     </div>
                 </div>
+                <!-- Country -->
                 <div class="country">
                     <div class="subtitle">
                         <p>Country</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="error country">*you must select one</p>
                     </div>
                     <select class="selectcountry">
                         <option value="argentina">Argentina</option>
@@ -112,12 +119,13 @@
                     </select>
                     <div class="line"></div>
                 </div>
-                <div class="textarea" id="comments">
+                <!-- Comments -->
+                <div class="textarea">
                     <div class="subtitle">
                         <p>Comments</p>
-                        <p class="error">*error</p>
+                        <p class="error" id="comments_error">*you must to write at least 10 characters</p>
                     </div>
-                    <textarea class="comments" rows="10" cols="50"></textarea>
+                    <textarea id="comments" class="comments" rows="10" cols="50"></textarea>
                     <div class="line"></div>
                 </div>
                 <button id="sumbitbutton" onclick="sumbit()">
