@@ -69,7 +69,6 @@ color: rgb(0, 132, 255);
 }
 /*#endregion Start*/
 
-
 /*#region Registration Form*/
 .regwrapper{
 position: absolute;
@@ -97,31 +96,42 @@ margin: 30px;
 .title h1{
 color: rgb(9, 15, 116);
 font-size: 40px;
-font-weight: 700;
+font-weight: 400;
 letter-spacing: -0.025em;
 }
 
-/*#endregion Registration Form*/
-
-/*#region Textbox*/
-
-.textbox{
-margin: 30px;
-display: flex;
-flex-direction: column;
-}
-
-.textbox p{
+p{
 color: rgb(9, 15, 116);
 font-size: 19px;
 letter-spacing: -0.025em;
 }
 
+.error{
+color: red;
+margin-top: 5px;
+display: none;
+}
+/*#endregion Registration Form*/
+
+/*#region Textbox*/
+
+.textbox{
+margin-left: 40px;
+margin-right: 40px;
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+}
+
+
 .textbox input{
 margin: 2px;
 background: none;
 border: none;
-font-size: 19px;
+font-size: 15px;
+height: 30px;
+font-family: 'Montserrat', sans-serif;
+color: rgb(6, 9, 63);
 }
 
 .line{
@@ -129,3 +139,67 @@ height: 2px;
 background: rgb(9, 15, 116);
 }
 /*#endregion Textbox*/
+
+/*#region Sex*/
+
+.sex{
+margin-left: 40px;
+margin-right: 40px;
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.sex p{
+margin-bottom: 10px;
+}
+
+.selectsex{
+display: flex;
+flex-direction: column;
+}
+
+.textsex{
+font-size: 15px;
+color: rgb(6, 9, 63);
+letter-spacing: -0.030em;
+display: flex;
+flex-direction: row-reverse;
+justify-content: flex-end;
+margin-bottom: 6px;
+}
+
+.radiosex{
+
+}
+
+/*#endregion Sex*/
+
+/*#region Country*/
+
+.country{
+margin-left: 40px;
+margin-right: 40px;
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.selectcountry {
+width: 100%;
+height: 30px;
+font-size: 15px;
+background: none;
+color: rgb(6, 9, 63);
+border: none;
+font-family: 'Montserrat', sans-serif;
+letter-spacing: -0.030em;
+}
+
+.country p{
+color: rgb(9, 15, 116);
+font-size: 19px;
+letter-spacing: -0.025em;
+margin-bottom: 10px;
+}
+/*#endregion Country*/
