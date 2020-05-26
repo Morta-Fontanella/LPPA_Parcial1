@@ -1,6 +1,7 @@
 let root = document.documentElement;
 var startdiv = null;
 var startbutton = null;
+var registrationform = null;
 
 var changebackground = function () { //Rotate and change the color of the background
     let root = document.documentElement;
@@ -33,15 +34,21 @@ var hidestartdiv = function () { //Disable the start button and fadeout the star
     startbutton = document.getElementById("startbutton");
     startbutton.disabled = true;
     startdiv.style.opacity = 0 + '%';
+    startdiv.style.marginLeft = '800px';
+    startdiv.style.zIndex = 1;
 }
 
-var showregistrationform = function () {
-
+var showregistrationform = function () { //animation and fadein of registrationform 
+    registrationform = document.getElementById("divregistrationform");
+    registrationform.style.opacity = 100 + '%';
+    registrationform.style.marginRight = '0px';
+    registrationform.style.zIndex = 2;
 }
 
 var getstarted = function () {
     changebackground()
     hidestartdiv()
+    showregistrationform()
 }
 
 var init = function () {
