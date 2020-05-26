@@ -282,3 +282,8 @@ color: rgb(147, 252, 170);
 
 /*#endregion Button*/
 
+@media only screen and (max-width: 500px) {
+#divregistrationform{
+min-width: 100%;
+}
+}
