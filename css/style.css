@@ -112,9 +112,14 @@ background: rgb(9, 15, 116);
 }
 
 .error{
+margin-left: 10px;
 color: red;
-margin-top: 5px;
-display: none;
+display: flex;
+}
+
+.subtitle{
+display: flex;
+flex-direction: row;
 }
 /*#endregion Registration Form*/
 
@@ -226,7 +231,6 @@ letter-spacing: -0.030em;
 }
 
 .country p{
-color: rgb(9, 15, 116);
 font-size: 19px;
 letter-spacing: -0.025em;
 margin-bottom: 10px;
@@ -277,3 +281,4 @@ color: rgb(147, 252, 170);
 }
 
 /*#endregion Button*/
+
