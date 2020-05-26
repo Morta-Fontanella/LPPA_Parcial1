@@ -9,6 +9,9 @@ display: flex;
 font-family: 'Montserrat', sans-serif;
 background: rgb(0,255,196);
 background: linear-gradient(var(--greadientangle), var(--gradientcolour1) 0%, var(--gradientcolour2) 100%);
+background-attachment: fixed;
+background-origin: initial;
+background-repeat: no-repeat;
 transition: 0.3s;
 }
 
