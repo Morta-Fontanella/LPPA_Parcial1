@@ -52,6 +52,10 @@ color: white;
 font-size: 20px;
 }
 
+.pp{
+flex-grow: 3;
+}
+
 #startbutton{
 padding: 0.5rem;
 border-radius: 3px;
@@ -224,7 +228,7 @@ display: flex;
 flex-direction: column;
 }
 
-.selectcountry {
+#selectcountry {
 width: 100%;
 height: 30px;
 font-size: 15px;

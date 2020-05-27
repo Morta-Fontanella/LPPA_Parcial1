@@ -73,7 +73,9 @@ var reseterror = function () {
     document.getElementById('sex_error').style.display = 'none';
     document.getElementById('interest_error').style.display = 'none';
     document.getElementById('country_error').style.display = 'none';
+    document.getElementById('line_country').style.background = 'rgb(9, 15, 116)';
     document.getElementById('comments_error').style.display = 'none';
+    document.getElementById('line_comments').style.background = 'rgb(9, 15, 116)';
 }
 
 var validatename = function () {//name validation
@@ -142,32 +144,32 @@ var validatesex = function () {//validate sex
     }
 }
 
-var validateinterest = function () {
+var validateinterest = function () {//validarte interest
     var music = document.getElementById('music')
     var sports = document.getElementById('sports')
     var games = document.getElementById('games')
     var tecnology = document.getElementById('tecnology')
     if (music.checked === true || sports.checked === true || games.checked === true || tecnology.checked === true) {
         if (music.checked === true) {
-            var music_console = 'music';
+            var music_console = 'Music';
         }
         else {
             music_console = '';
         }
         if (sports.checked === true) {
-            var sports_console = ' sports';
+            var sports_console = ' Sports';
         }
         else {
             sports_console = '';
         }
         if (games.checked === true) {
-            var games_console = ' games';
+            var games_console = ' Games';
         }
         else {
             games_console = '';
         }
         if (tecnology.checked === true) {
-            var tecnology_console = ' tecnology';
+            var tecnology_console = ' Tecnology';
         }
         else {
             tecnology_console = '';
@@ -179,11 +181,38 @@ var validateinterest = function () {
     }
 }
 
-var validatecountry = function () {
+var validatecountry = function () {//validate country
+    var selectcountry = document.getElementById('selectcountry');
+    if (selectcountry.selectedIndex != 0) {
+        if (selectcountry.selectedIndex === 1) {
+            country_console = 'Argentina';
+        }
+        if (selectcountry.selectedIndex === 2) {
+            country_console = 'Chile';
+        }
+        if (selectcountry.selectedIndex === 3) {
+            country_console = 'Brasil';
+        }
+        if (selectcountry.selectedIndex === 4) {
+            country_console = 'Uruguay';
+        }
+    }
+    else {
+        document.getElementById('country_error').style.display = 'flex';
+        document.getElementById('line_country').style.background = 'red';
+        error = true;
+    }
 }
 
 var validatecomments = function () {
-
+    var comments = document.getElementById('comments');
+    if (comments.value.length > 0) {
+        comments_console = comments.value;
+    } else {
+        document.getElementById('comments_error').style.display = 'flex';
+        document.getElementById('line_comments').style.background = 'red';
+        error = true;
+    }
 }
 
 var writeconsole = function () {
@@ -208,10 +237,15 @@ var sumbit = function () {
     validateinterest();
     validatecountry();
     validatecomments();
-    writeconsole();
+    if (error != true) {
+        writeconsole();
+    } else {
+    }
+
 }
 
 var init = function () {
+
 }
 
 window.onload = init
