@@ -92,16 +92,18 @@
                     </div>
                     <div class="selectinterest">
                         <label class="textinterest">Music
-                            <input name="actioninterest" type="checkbox" class="radiointerest" id="music">
+                            <input name="actioninterest" type="checkbox" class="radiointerest" value="music" id="music">
                         </label>
                         <label class="textinterest">Sports
-                            <input name="actioninterest" type="checkbox" class="radiointerest" id="sports">
+                            <input name="actioninterest" type="checkbox" class="radiointerest" value="sports"
+                                id="sports">
                         </label>
                         <label class="textinterest">Games
-                            <input name="actioninterest" type="checkbox" class="radiointerest" id="games">
+                            <input name="actioninterest" type="checkbox" class="radiointerest" value="games" id="games">
                         </label>
                         <label class="textinterest">Tecnology
-                            <input name="actioninterest" type="checkbox" class="radiointerest" id="tecnology">
+                            <input name="actioninterest" type="checkbox" class="radiointerest" value="tecnology"
+                                id="tecnology">
                         </label>
                     </div>
                 </div>
@@ -112,10 +114,11 @@
                         <p class="error" id="country_error">*you must select one</p>
                     </div>
                     <select class="selectcountry">
-                        <option value="argentina">Argentina</option>
-                        <option value="chile">Chile</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="uruguay">Uruguay</option>
+                        <option name="actioncountry" disabled selected value="nope"> -- select an option -- </option>
+                        <option name="actioncountry" value="argentina">Argentina</option>
+                        <option name="actioncountry" value="chile">Chile</option>
+                        <option name="actioncountry" value="brasil">Brasil</option>
+                        <option name="actioncountry" value="uruguay">Uruguay</option>
                     </select>
                     <div class="line"></div>
                 </div>

@@ -148,13 +148,31 @@ var validateinterest = function () {
     var games = document.getElementById('games')
     var tecnology = document.getElementById('tecnology')
     if (music.checked === true || sports.checked === true || games.checked === true || tecnology.checked === true) {
-        var checkboxs = document.getElementsByClassName('actioninterest')
-        for (var i = 0, length = checkboxs.length; i < length; i++) {
-            if (checkboxs[i].checked) {
-                interest_console = checkboxs[i].value;
-                console.log(interest_console);
-            }
+        if (music.checked === true) {
+            var music_console = 'music';
         }
+        else {
+            music_console = '';
+        }
+        if (sports.checked === true) {
+            var sports_console = ' sports';
+        }
+        else {
+            sports_console = '';
+        }
+        if (games.checked === true) {
+            var games_console = ' games';
+        }
+        else {
+            games_console = '';
+        }
+        if (tecnology.checked === true) {
+            var tecnology_console = ' tecnology';
+        }
+        else {
+            tecnology_console = '';
+        }
+        interest_console = music_console + sports_console + games_console + tecnology_console;
     } else {
         document.getElementById('interest_error').style.display = 'flex';
         error = true;
@@ -162,7 +180,6 @@ var validateinterest = function () {
 }
 
 var validatecountry = function () {
-
 }
 
 var validatecomments = function () {
