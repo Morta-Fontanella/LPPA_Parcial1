@@ -37,8 +37,8 @@
                         <p class="error" id="name_error">*must be at least 3 characters</p>
                     </div>
                     <input id="name" type="text">
-                    <div class="line"></div>
-                </div>`
+                    <div class="line" id="line_name"></div>
+                </div>
                 <!-- Surame -->
                 <div class="textbox">
                     <div class="subtitle">
@@ -46,7 +46,7 @@
                         <p class="error" id="surname_error">*must be at least 3 characters</p>
                     </div>
                     <input id="surname" type="text">
-                    <div class="line"></div>
+                    <div class="line" id="line_surname"></div>
                 </div>
                 <!-- Email -->
                 <div class="textbox">
@@ -55,7 +55,7 @@
                         <p class="error" id="email_error">*invalid email</p>
                     </div>
                     <input id="email" type="email">
-                    <div class="line"></div>
+                    <div class="line" id="line_email"></div>
                 </div>
                 <!-- Age -->
                 <div class="textbox">
@@ -64,7 +64,7 @@
                         <p class="error" id="age_error">*must be between 0 and 100</p>
                     </div>
                     <input id="age" type="number">
-                    <div class="line"></div>
+                    <div class="line" id="line_age"></div>
                 </div>
                 <!-- Sex -->
                 <div class="sex">
@@ -88,7 +88,7 @@
                 <div class="interest">
                     <div class="subtitle">
                         <p>Areas of interest</p>
-                        <p class="error" id="error_interest">*you must select at least one</p>
+                        <p class="error" id="interest_error">*you must select at least one</p>
                     </div>
                     <div class="selectinterest">
                         <label class="textinterest">Music
@@ -109,7 +109,7 @@
                 <div class="country">
                     <div class="subtitle">
                         <p>Country</p>
-                        <p class="error" id="error country">*you must select one</p>
+                        <p class="error" id="country_error">*you must select one</p>
                     </div>
                     <select class="selectcountry">
                         <option value="argentina">Argentina</option>

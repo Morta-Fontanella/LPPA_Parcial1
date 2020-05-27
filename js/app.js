@@ -2,6 +2,9 @@ let root = document.documentElement;
 var startdiv = null;
 var startbutton = null;
 var name_console = null;
+var surname_console = null;
+var email_console = null;
+var age_console = null;
 
 var changebackground = function () { //Rotate and change the color of the background
     let root = document.documentElement;
@@ -54,8 +57,18 @@ var getstarted = function () { //button get started funtions
 
 //Validations
 var reseterror = function () {
-    var name_error = document.getElementById('name_error').style.display = 'none';
-    var prueba = document.getElementById('prueba').style.display = 'none';
+    document.getElementById('name_error').style.display = 'none';
+    document.getElementById('line_name').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('surname_error').style.display = 'none';
+    document.getElementById('line_surname').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('email_error').style.display = 'none';
+    document.getElementById('line_email').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('age_error').style.display = 'none';
+    document.getElementById('line_age').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('sex_error').style.display = 'none';
+    document.getElementById('interest_error').style.display = 'none';
+    document.getElementById('country_error').style.display = 'none';
+    document.getElementById('comments_error').style.display = 'none';
 }
 
 var validatename = function () {//name validation
@@ -63,14 +76,52 @@ var validatename = function () {//name validation
     if (name.value.length >= 3) {
         name_console = name.value;
     } else {
-        var name_error = document.getElementById('name_error');
-        name_error.style.display = 'flex';
+        document.getElementById('name_error').style.display = 'flex';
+        document.getElementById('line_name').style.background = 'red';
+    }
+}
+
+var validatesurname = function () {//surname validation
+    var surname = document.getElementById('surname');
+    if (surname.value.length >= 3) {
+        surname_console = surname.value;
+    } else {
+        document.getElementById('surname_error').style.display = 'flex';
+        document.getElementById('line_surname').style.background = 'red';
+    }
+}
+
+function validate(email) {//email 
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+var validateemail = function () {//email validation
+    email = document.getElementById('email');
+    if (validate(email.value)) {
+        email_console = email.value;
+    } else {
+        document.getElementById('email_error').style.display = 'flex';
+        document.getElementById('line_email').style.background = 'red';
+    }
+}
+
+var validateage = function () {//age validation
+    age = document.getElementById('age');
+    if (parseFloat(age.value) > 0 || age < 100) {
+        age_console = parseInt(age.value);
+    } else {
+        document.getElementById('age_error').style.display = 'flex';
+        document.getElementById('line_age').style.background = 'red';
     }
 }
 
 var sumbit = function () {
     reseterror();
     validatename();
+    validatesurname();
+    validateemail();
+    validateage();
 }
 
 var init = function () {
