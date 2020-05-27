@@ -239,9 +239,8 @@ var sumbit = function () {
     validatecomments();
     if (error != true) {
         writeconsole();
-    } else {
+        alert('Press F12 and open the console to see the results')
     }
-
 }
 
 var init = function () {
