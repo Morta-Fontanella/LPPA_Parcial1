@@ -17,12 +17,13 @@ transition: 0.3s;
 
 .wrapper{
 z-index: 2;
+position: absolute;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
 min-height: 100vh;
-min-width: 100%;
+width: 100vw;
 }
 
 /*#region Start*/
@@ -80,7 +81,7 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 min-height: 100vh;
-min-width: 100%;
+min-width: 100vw;
 }
 
 #divregistrationform{

@@ -159,8 +159,16 @@ var validateinterest = function () {
     }
 }
 
+var validatecountry = function () {
+
+}
+
+var validatecomments = function () {
+
+}
+
 var writeconsole = function () {
-    console.log('Results');
+    console.log('----- Results -----');
     console.log('Name: ' + name_console);
     console.log('Surname: ' + surname_console);
     console.log('Email: ' + email_console);
@@ -179,6 +187,8 @@ var sumbit = function () {
     validateage();
     validatesex();
     validateinterest();
+    validatecountry();
+    validatecomments();
     writeconsole();
 }
 
