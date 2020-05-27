@@ -114,14 +114,10 @@ var validatesurname = function () {//surname validation
     }
 }
 
-function validate(email) {//email regular expression
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
 
 var validateemail = function () {//email validation
     email = document.getElementById('email');
-    if (validate(email.value)) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
         email_console = email.value;
     } else {
         document.getElementById('email_error').style.display = 'flex';
