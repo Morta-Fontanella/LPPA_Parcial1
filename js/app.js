@@ -1,10 +1,12 @@
-let root = document.documentElement;
-var startdiv = null;
-var startbutton = null;
+var error = null;
 var name_console = null;
 var surname_console = null;
 var email_console = null;
 var age_console = null;
+var sex_console = null;
+var interest_console = null;
+var country_console = null;
+var comments_console = null;
 
 var changebackground = function () { //Rotate and change the color of the background
     let root = document.documentElement;
@@ -34,7 +36,7 @@ var changebackground = function () { //Rotate and change the color of the backgr
 
 var hidestartdiv = function () { //Disable the start button and fadeout the startdiv
     var startdiv = document.getElementById('startdiv');
-    startbutton = document.getElementById('startbutton');
+    var startbutton = document.getElementById('startbutton');
     startbutton.disabled = true;
     startdiv.style.opacity = 0 + '%';
     startdiv.style.marginLeft = '800px';
@@ -57,6 +59,7 @@ var getstarted = function () { //button get started funtions
 
 //Validations
 var reseterror = function () {
+    error = false;
     document.getElementById('name_error').style.display = 'none';
     document.getElementById('line_name').style.background = 'rgb(9, 15, 116)';
     document.getElementById('surname_error').style.display = 'none';
@@ -78,6 +81,7 @@ var validatename = function () {//name validation
     } else {
         document.getElementById('name_error').style.display = 'flex';
         document.getElementById('line_name').style.background = 'red';
+        error = true;
     }
 }
 
@@ -88,10 +92,11 @@ var validatesurname = function () {//surname validation
     } else {
         document.getElementById('surname_error').style.display = 'flex';
         document.getElementById('line_surname').style.background = 'red';
+        error = true;
     }
 }
 
-function validate(email) {//email 
+function validate(email) {//email regular expression
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
@@ -103,6 +108,7 @@ var validateemail = function () {//email validation
     } else {
         document.getElementById('email_error').style.display = 'flex';
         document.getElementById('line_email').style.background = 'red';
+        error = true;
     }
 }
 
@@ -113,7 +119,56 @@ var validateage = function () {//age validation
     } else {
         document.getElementById('age_error').style.display = 'flex';
         document.getElementById('line_age').style.background = 'red';
+        error = true;
     }
+}
+
+var validatesex = function () {//validate sex
+    var male = document.getElementById('male');
+    var female = document.getElementById('female');
+    var other = document.getElementById('other');
+    if (male.checked === true || female.checked === true || other.checked === true) {
+        var radios = document.getElementsByName('actionsex');
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                sex_console = radios[i].value;
+            }
+        }
+    } else {
+        document.getElementById('sex_error').style.display = 'flex';
+        error = true;
+    }
+}
+
+var validateinterest = function () {
+    var music = document.getElementById('music')
+    var sports = document.getElementById('sports')
+    var games = document.getElementById('games')
+    var tecnology = document.getElementById('tecnology')
+    if (music.checked === true || sports.checked === true || games.checked === true || tecnology.checked === true) {
+        var checkboxs = document.getElementsByClassName('actioninterest')
+        for (var i = 0, length = checkboxs.length; i < length; i++) {
+            if (checkboxs[i].checked) {
+                interest_console = checkboxs[i].value;
+                console.log(interest_console);
+            }
+        }
+    } else {
+        document.getElementById('interest_error').style.display = 'flex';
+        error = true;
+    }
+}
+
+var writeconsole = function () {
+    console.log('Results');
+    console.log('Name: ' + name_console);
+    console.log('Surname: ' + surname_console);
+    console.log('Email: ' + email_console);
+    console.log('Age: ' + age_console);
+    console.log('Sex: ' + sex_console);
+    console.log('Areas of interest: ' + interest_console);
+    console.log('Country: ' + country_console);
+    console.log('Comments: ' + comments_console);
 }
 
 var sumbit = function () {
@@ -122,10 +177,12 @@ var sumbit = function () {
     validatesurname();
     validateemail();
     validateage();
+    validatesex();
+    validateinterest();
+    writeconsole();
 }
 
 var init = function () {
-
 }
 
 window.onload = init
