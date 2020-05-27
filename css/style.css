@@ -130,6 +130,10 @@ display: none;
 display: flex;
 flex-direction: row;
 }
+
+.dis{
+display: none;
+}
 /*#endregion Registration Form*/
 
 /*#region Textbox*/
@@ -153,6 +157,9 @@ font-family: 'Montserrat', sans-serif;
 color: rgb(6, 9, 63);
 }
 
+.textbox input:focus{
+outline: none;
+}
 /*#endregion Textbox*/
 
 /*#region Sex*/
@@ -239,6 +246,10 @@ font-family: 'Montserrat', sans-serif;
 letter-spacing: -0.030em;
 }
 
+#selectcountry option{
+border: none;
+}
+
 .country p{
 margin-bottom: 10px;
 }
@@ -265,6 +276,9 @@ font-family: 'Montserrat', sans-serif;
 color: rgb(6, 9, 63);
 }
 
+.textarea textarea{
+outline: none;
+}
 /*#endregion Textarea*/
 
 /*#region Button*/

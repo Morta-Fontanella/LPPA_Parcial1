@@ -36,7 +36,7 @@
                         <p class="pp">Name</p>
                         <p class="error" id="name_error">*must be at least 3 characters</p>
                     </div>
-                    <input id="name" type="text">
+                    <input id="name" class="input-field" type="text" onkeyup="validatetext()">
                     <div class="line" id="line_name"></div>
                 </div>
                 <!-- Surame -->
@@ -45,7 +45,7 @@
                         <p class="pp">Surname</p>
                         <p class="error" id="surname_error">*must be at least 3 characters</p>
                     </div>
-                    <input id="surname" type="text">
+                    <input id="surname" class="input-field" type="text" onkeyup="validatetext()">
                     <div class="line" id="line_surname"></div>
                 </div>
                 <!-- Email -->
@@ -61,7 +61,7 @@
                 <div class="textbox">
                     <div class="subtitle">
                         <p class="pp">Age</p>
-                        <p class="error" id="age_error">*must be between 0 and 100</p>
+                        <p class="error" id="age_error">*must be integer between 0 and 100</p>
                     </div>
                     <input id="age" type="number">
                     <div class="line" id="line_age"></div>

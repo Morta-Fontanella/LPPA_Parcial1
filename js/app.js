@@ -34,6 +34,16 @@ var changebackground = function () { //Rotate and change the color of the backgr
     requestAnimationFrame(tick)
 }
 
+function disableScrolling() {
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function () { window.scrollTo(x, y); };
+}
+
+function enableScrolling() {
+    window.onscroll = function () { };
+}
+
 var hidestartdiv = function () { //Disable the start button and fadeout the startdiv
     var startdiv = document.getElementById('startdiv');
     var startbutton = document.getElementById('startbutton');
@@ -47,6 +57,7 @@ var hidestartdiv = function () { //Disable the start button and fadeout the star
 var showregistrationform = function () { //animation and fadein of registrationform 
     var registrationform = document.getElementById('divregistrationform');
     var regwrapper = document.getElementById('regwrapper');
+    enableScrolling()
     regwrapper.style.minWidth = '100vw';
     registrationform.style.opacity = 100 + '%';
     registrationform.style.marginRight = '0px';
@@ -78,24 +89,27 @@ var reseterror = function () {
     document.getElementById('line_comments').style.background = 'rgb(9, 15, 116)';
 }
 
+
 var validatename = function () {//name validation
     var name = document.getElementById('name');
-    if (name.value.length >= 3) {
+    if (name.value.length >= 3 && name.value.match(/^[a-zA-Z]+$/)) {
         name_console = name.value;
     } else {
         document.getElementById('name_error').style.display = 'flex';
         document.getElementById('line_name').style.background = 'red';
+        console.log('the name must be at least 3 letters');
         error = true;
     }
 }
 
 var validatesurname = function () {//surname validation
     var surname = document.getElementById('surname');
-    if (surname.value.length >= 3) {
+    if (surname.value.length >= 3 && surname.value.match(/^[a-zA-Z]+$/)) {
         surname_console = surname.value;
     } else {
         document.getElementById('surname_error').style.display = 'flex';
         document.getElementById('line_surname').style.background = 'red';
+        console.log('the surname must be at least 3 letters');
         error = true;
     }
 }
@@ -112,17 +126,19 @@ var validateemail = function () {//email validation
     } else {
         document.getElementById('email_error').style.display = 'flex';
         document.getElementById('line_email').style.background = 'red';
+        console.log('invalid email');
         error = true;
     }
 }
 
 var validateage = function () {//age validation
     age = document.getElementById('age');
-    if (parseFloat(age.value) > 0 || age < 100) {
+    if (Number.isInteger(age) && parseFloat(age.value) > 0 && parseFloat(age.value) < 100) {
         age_console = parseInt(age.value);
     } else {
         document.getElementById('age_error').style.display = 'flex';
         document.getElementById('line_age').style.background = 'red';
+        console.log('the age must be integer between 0 and 100');
         error = true;
     }
 }
@@ -140,6 +156,7 @@ var validatesex = function () {//validate sex
         }
     } else {
         document.getElementById('sex_error').style.display = 'flex';
+        console.log('you must select one sex');
         error = true;
     }
 }
@@ -177,6 +194,7 @@ var validateinterest = function () {//validarte interest
         interest_console = music_console + sports_console + games_console + tecnology_console;
     } else {
         document.getElementById('interest_error').style.display = 'flex';
+        console.log('you must select at least one interest');
         error = true;
     }
 }
@@ -200,6 +218,7 @@ var validatecountry = function () {//validate country
     else {
         document.getElementById('country_error').style.display = 'flex';
         document.getElementById('line_country').style.background = 'red';
+        console.log('you must select one country');
         error = true;
     }
 }
@@ -211,6 +230,7 @@ var validatecomments = function () {
     } else {
         document.getElementById('comments_error').style.display = 'flex';
         document.getElementById('line_comments').style.background = 'red';
+        console.log('you must to write at least 1 character on a comment');
         error = true;
     }
 }
@@ -244,7 +264,7 @@ var sumbit = function () {
 }
 
 var init = function () {
-
+    disableScrolling();
 }
 
 window.onload = init
