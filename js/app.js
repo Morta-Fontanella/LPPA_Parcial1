@@ -131,9 +131,27 @@ var validateemail = function () {//email validation
     }
 }
 
+function validate(evt) {
+    var theEvent = evt || window.event;
+
+    // Handle paste
+    if (theEvent.type === 'paste') {
+        key = event.clipboardData.getData('text/plain');
+    } else {
+        // Handle key press
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+    }
+    var regex = /[0-9]/;
+    if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
+    }
+}
+
 var validateage = function () {//age validation
     age = document.getElementById('age');
-    if (Number.isInteger(age) && parseFloat(age.value) > 0 && parseFloat(age.value) < 100) {
+    if (age.value > 0 && age.value < 100) {
         age_console = parseInt(age.value);
     } else {
         document.getElementById('age_error').style.display = 'flex';

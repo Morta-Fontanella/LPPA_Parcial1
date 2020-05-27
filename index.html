@@ -34,18 +34,18 @@
                 <div class="textbox">
                     <div class="subtitle">
                         <p class="pp">Name</p>
-                        <p class="error" id="name_error">*must be at least 3 characters</p>
+                        <p class="error" id="name_error">*must be at least 3 letters</p>
                     </div>
-                    <input id="name" class="input-field" type="text" onkeyup="validatetext()">
+                    <input id="name" class="input-field" type="text">
                     <div class="line" id="line_name"></div>
                 </div>
                 <!-- Surame -->
                 <div class="textbox">
                     <div class="subtitle">
                         <p class="pp">Surname</p>
-                        <p class="error" id="surname_error">*must be at least 3 characters</p>
+                        <p class="error" id="surname_error">*must be at least 3 letters</p>
                     </div>
-                    <input id="surname" class="input-field" type="text" onkeyup="validatetext()">
+                    <input id="surname" class="input-field" type="text">
                     <div class="line" id="line_surname"></div>
                 </div>
                 <!-- Email -->
@@ -63,7 +63,7 @@
                         <p class="pp">Age</p>
                         <p class="error" id="age_error">*must be integer between 0 and 100</p>
                     </div>
-                    <input id="age" type="number">
+                    <input id="age" type="number" onkeypress='validate(event)'>
                     <div class="line" id="line_age"></div>
                 </div>
                 <!-- Sex -->
