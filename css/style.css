@@ -264,11 +264,14 @@ color: rgb(6, 9, 63);
 /*#endregion Textarea*/
 
 /*#region Button*/
-#sumbitbutton{
+.divbutton{
 margin-left: 40px;
 margin-right: 40px;
 margin-bottom: 20px;
-width: 84%;
+}
+
+#sumbitbutton{
+width: 100%;
 padding: 0.5rem;
 border-radius: 3px;
 border: 1px solid rgb(6, 9, 63);
