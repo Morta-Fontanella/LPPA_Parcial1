@@ -74,14 +74,14 @@ color: rgb(0, 132, 255);
 /*#endregion Start*/
 
 /*#region Registration Form*/
-.regwrapper{
+#regwrapper{
 position: absolute;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
 min-height: 100vh;
-min-width: 100vw;
+max-width: 100vw;
 }
 
 #divregistrationform{
@@ -288,6 +288,6 @@ color: rgb(147, 252, 170);
 
 @media only screen and (max-width: 500px) {
 #divregistrationform{
-min-width: 100%;
+min-width: 100vw;
 }
 }

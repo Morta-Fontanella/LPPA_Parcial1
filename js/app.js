@@ -46,6 +46,8 @@ var hidestartdiv = function () { //Disable the start button and fadeout the star
 
 var showregistrationform = function () { //animation and fadein of registrationform 
     var registrationform = document.getElementById('divregistrationform');
+    var regwrapper = document.getElementById('regwrapper');
+    regwrapper.style.minWidth = '100vw';
     registrationform.style.opacity = 100 + '%';
     registrationform.style.marginRight = '0px';
     registrationform.style.zIndex = 2;
