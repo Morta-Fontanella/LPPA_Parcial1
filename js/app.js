@@ -1,3 +1,4 @@
+//global variables
 var error = null;
 var nameconsole = null;
 var surnameconsole = null;
@@ -34,13 +35,13 @@ var changebackground = function () { //Rotate and change the color of the backgr
     requestAnimationFrame(tick)
 }
 
-function disableScrolling() {
+function disableScrolling() { //disable mouse scrolling
     var x = window.scrollX;
     var y = window.scrollY;
     window.onscroll = function () { window.scrollTo(x, y); };
 }
 
-function enableScrolling() {
+function enableScrolling() { //enable mouse scrolling
     window.onscroll = function () { };
 }
 
@@ -70,8 +71,7 @@ var getstarted = function () { //button get started funtions
     showregistrationform()
 }
 
-//Validations
-var reseterror = function () {
+var reseterror = function () { //error msg reset
     error = false;
     document.getElementById('nameerror').style.display = 'none';
     document.getElementById('linename').style.background = 'rgb(9, 15, 116)';
@@ -114,7 +114,6 @@ var validatesurname = function () {//surname validation
     }
 }
 
-
 var validateemail = function () {//email validation
     email = document.getElementById('email');
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
@@ -127,7 +126,7 @@ var validateemail = function () {//email validation
     }
 }
 
-function validate(evt) {
+function validate(evt) { //validate only numbers
     var theEvent = evt || window.event;
 
     // Handle paste
@@ -237,7 +236,7 @@ var validatecountry = function () {//validate country
     }
 }
 
-var validatecomments = function () {
+var validatecomments = function () {//validate comments
     var comments = document.getElementById('comments');
     if (comments.value.length > 0) {
         commentsconsole = comments.value;
@@ -249,7 +248,7 @@ var validatecomments = function () {
     }
 }
 
-var writeconsole = function () {
+var writeconsole = function () {//write the results on the console
     console.log('----- Results -----');
     console.log('Name: ' + nameconsole);
     console.log('Surname: ' + surnameconsole);
@@ -261,7 +260,7 @@ var writeconsole = function () {
     console.log('Comments: ' + commentsconsole);
 }
 
-var sumbit = function () {
+var submit = function () { //button submit funtions
     console.clear();
     reseterror();
     validatename();
