@@ -1,12 +1,12 @@
 var error = null;
-var name_console = null;
-var surname_console = null;
-var email_console = null;
-var age_console = null;
-var sex_console = null;
-var interest_console = null;
-var country_console = null;
-var comments_console = null;
+var nameconsole = null;
+var surnameconsole = null;
+var emailconsole = null;
+var ageconsole = null;
+var sexconsole = null;
+var interestconsole = null;
+var countryconsole = null;
+var commentsconsole = null;
 
 var changebackground = function () { //Rotate and change the color of the background
     let root = document.documentElement;
@@ -73,30 +73,30 @@ var getstarted = function () { //button get started funtions
 //Validations
 var reseterror = function () {
     error = false;
-    document.getElementById('name_error').style.display = 'none';
-    document.getElementById('line_name').style.background = 'rgb(9, 15, 116)';
-    document.getElementById('surname_error').style.display = 'none';
-    document.getElementById('line_surname').style.background = 'rgb(9, 15, 116)';
-    document.getElementById('email_error').style.display = 'none';
-    document.getElementById('line_email').style.background = 'rgb(9, 15, 116)';
-    document.getElementById('age_error').style.display = 'none';
-    document.getElementById('line_age').style.background = 'rgb(9, 15, 116)';
-    document.getElementById('sex_error').style.display = 'none';
-    document.getElementById('interest_error').style.display = 'none';
-    document.getElementById('country_error').style.display = 'none';
-    document.getElementById('line_country').style.background = 'rgb(9, 15, 116)';
-    document.getElementById('comments_error').style.display = 'none';
-    document.getElementById('line_comments').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('nameerror').style.display = 'none';
+    document.getElementById('linename').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('surnameerror').style.display = 'none';
+    document.getElementById('linesurname').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('emailerror').style.display = 'none';
+    document.getElementById('lineemail').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('ageerror').style.display = 'none';
+    document.getElementById('lineage').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('sexerror').style.display = 'none';
+    document.getElementById('interesterror').style.display = 'none';
+    document.getElementById('countryerror').style.display = 'none';
+    document.getElementById('linecountry').style.background = 'rgb(9, 15, 116)';
+    document.getElementById('commentserror').style.display = 'none';
+    document.getElementById('linecomments').style.background = 'rgb(9, 15, 116)';
 }
 
 
 var validatename = function () {//name validation
     var name = document.getElementById('name');
     if (name.value.length >= 3 && name.value.match(/^[a-zA-Z]+$/)) {
-        name_console = name.value;
+        nameconsole = name.value;
     } else {
-        document.getElementById('name_error').style.display = 'flex';
-        document.getElementById('line_name').style.background = 'red';
+        document.getElementById('nameerror').style.display = 'flex';
+        document.getElementById('linename').style.background = 'red';
         console.log('the name must be at least 3 letters');
         error = true;
     }
@@ -105,10 +105,10 @@ var validatename = function () {//name validation
 var validatesurname = function () {//surname validation
     var surname = document.getElementById('surname');
     if (surname.value.length >= 3 && surname.value.match(/^[a-zA-Z]+$/)) {
-        surname_console = surname.value;
+        surnameconsole = surname.value;
     } else {
-        document.getElementById('surname_error').style.display = 'flex';
-        document.getElementById('line_surname').style.background = 'red';
+        document.getElementById('surnameerror').style.display = 'flex';
+        document.getElementById('linesurname').style.background = 'red';
         console.log('the surname must be at least 3 letters');
         error = true;
     }
@@ -118,10 +118,10 @@ var validatesurname = function () {//surname validation
 var validateemail = function () {//email validation
     email = document.getElementById('email');
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
-        email_console = email.value;
+        emailconsole = email.value;
     } else {
-        document.getElementById('email_error').style.display = 'flex';
-        document.getElementById('line_email').style.background = 'red';
+        document.getElementById('emailerror').style.display = 'flex';
+        document.getElementById('lineemail').style.background = 'red';
         console.log('invalid email');
         error = true;
     }
@@ -148,10 +148,10 @@ function validate(evt) {
 var validateage = function () {//age validation
     age = document.getElementById('age');
     if (age.value > 0 && age.value < 100) {
-        age_console = parseInt(age.value);
+        ageconsole = parseInt(age.value);
     } else {
-        document.getElementById('age_error').style.display = 'flex';
-        document.getElementById('line_age').style.background = 'red';
+        document.getElementById('ageerror').style.display = 'flex';
+        document.getElementById('lineage').style.background = 'red';
         console.log('the age must be integer between 0 and 100');
         error = true;
     }
@@ -165,11 +165,11 @@ var validatesex = function () {//validate sex
         var radios = document.getElementsByName('actionsex');
         for (var i = 0, length = radios.length; i < length; i++) {
             if (radios[i].checked) {
-                sex_console = radios[i].value;
+                sexconsole = radios[i].value;
             }
         }
     } else {
-        document.getElementById('sex_error').style.display = 'flex';
+        document.getElementById('sexerror').style.display = 'flex';
         console.log('you must select one sex');
         error = true;
     }
@@ -182,32 +182,32 @@ var validateinterest = function () {//validarte interest
     var tecnology = document.getElementById('tecnology')
     if (music.checked === true || sports.checked === true || games.checked === true || tecnology.checked === true) {
         if (music.checked === true) {
-            var music_console = 'Music';
+            var musicconsole = 'Music';
         }
         else {
-            music_console = '';
+            musicconsole = '';
         }
         if (sports.checked === true) {
-            var sports_console = ' Sports';
+            var sportsconsole = ' Sports';
         }
         else {
-            sports_console = '';
+            sportsconsole = '';
         }
         if (games.checked === true) {
-            var games_console = ' Games';
+            var gamesconsole = ' Games';
         }
         else {
-            games_console = '';
+            gamesconsole = '';
         }
         if (tecnology.checked === true) {
-            var tecnology_console = ' Tecnology';
+            var tecnologyconsole = ' Tecnology';
         }
         else {
-            tecnology_console = '';
+            tecnologyconsole = '';
         }
-        interest_console = music_console + sports_console + games_console + tecnology_console;
+        interestconsole = musicconsole + sportsconsole + gamesconsole + tecnologyconsole;
     } else {
-        document.getElementById('interest_error').style.display = 'flex';
+        document.getElementById('interesterror').style.display = 'flex';
         console.log('you must select at least one interest');
         error = true;
     }
@@ -217,21 +217,21 @@ var validatecountry = function () {//validate country
     var selectcountry = document.getElementById('selectcountry');
     if (selectcountry.selectedIndex != 0) {
         if (selectcountry.selectedIndex === 1) {
-            country_console = 'Argentina';
+            countryconsole = 'Argentina';
         }
         if (selectcountry.selectedIndex === 2) {
-            country_console = 'Chile';
+            countryconsole = 'Chile';
         }
         if (selectcountry.selectedIndex === 3) {
-            country_console = 'Brasil';
+            countryconsole = 'Brasil';
         }
         if (selectcountry.selectedIndex === 4) {
-            country_console = 'Uruguay';
+            countryconsole = 'Uruguay';
         }
     }
     else {
-        document.getElementById('country_error').style.display = 'flex';
-        document.getElementById('line_country').style.background = 'red';
+        document.getElementById('countryerror').style.display = 'flex';
+        document.getElementById('linecountry').style.background = 'red';
         console.log('you must select one country');
         error = true;
     }
@@ -240,10 +240,10 @@ var validatecountry = function () {//validate country
 var validatecomments = function () {
     var comments = document.getElementById('comments');
     if (comments.value.length > 0) {
-        comments_console = comments.value;
+        commentsconsole = comments.value;
     } else {
-        document.getElementById('comments_error').style.display = 'flex';
-        document.getElementById('line_comments').style.background = 'red';
+        document.getElementById('commentserror').style.display = 'flex';
+        document.getElementById('linecomments').style.background = 'red';
         console.log('you must to write at least 1 character on a comment');
         error = true;
     }
@@ -251,17 +251,18 @@ var validatecomments = function () {
 
 var writeconsole = function () {
     console.log('----- Results -----');
-    console.log('Name: ' + name_console);
-    console.log('Surname: ' + surname_console);
-    console.log('Email: ' + email_console);
-    console.log('Age: ' + age_console);
-    console.log('Sex: ' + sex_console);
-    console.log('Areas of interest: ' + interest_console);
-    console.log('Country: ' + country_console);
-    console.log('Comments: ' + comments_console);
+    console.log('Name: ' + nameconsole);
+    console.log('Surname: ' + surnameconsole);
+    console.log('Email: ' + emailconsole);
+    console.log('Age: ' + ageconsole);
+    console.log('Sex: ' + sexconsole);
+    console.log('Areas of interest: ' + interestconsole);
+    console.log('Country: ' + countryconsole);
+    console.log('Comments: ' + commentsconsole);
 }
 
 var sumbit = function () {
+    console.clear();
     reseterror();
     validatename();
     validatesurname();

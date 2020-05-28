@@ -1,138 +1,138 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Registration Form</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet">
-        <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="js/app.js"></script>
+            href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+            rel='stylesheet'>
+        <link rel=' stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+        <link rel='stylesheet' href='css/style.css'>
+        <script type='text/javascript' src='js/app.js'></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div id="startdiv">
-                <h1 class="starttitle">Welcome to the registration form</h1>
-                <h2 class="startsubtitle">Website developed in compliance with the instructions of the first LPPA
+        <div class='wrapper'>
+            <div id='startdiv'>
+                <h1 class='starttitle'>Welcome to the registration form</h1>
+                <h2 class='startsubtitle'>Website developed in compliance with the instructions of the first LPPA
                     partial by
                     Facundo Fontanella
                 </h2>
-                <button id="startbutton" onclick="getstarted()">
+                <button id='startbutton' onclick='getstarted()'>
                     <a>Get Started</a>
                 </button>
             </div>
         </div>
-        <div id="regwrapper">
-            <div id="divregistrationform">
-                <div class="title">
+        <div id='regwrapper'>
+            <div id='divregistrationform'>
+                <div class='title'>
                     <h1>Registration</h1>
                 </div>
                 <!-- Name -->
-                <div class="textbox">
-                    <div class="subtitle">
-                        <p class="pp">Name</p>
-                        <p class="error" id="name_error">*must be at least 3 letters</p>
+                <div class='textbox'>
+                    <div class='subtitle'>
+                        <p class='pp'>Name</p>
+                        <p class='error' id='nameerror'>*must be at least 3 letters</p>
                     </div>
-                    <input id="name" class="input-field" type="text">
-                    <div class="line" id="line_name"></div>
+                    <input id='name' class='input-field' type='text'>
+                    <div class='line' id='linename'></div>
                 </div>
                 <!-- Surame -->
-                <div class="textbox">
-                    <div class="subtitle">
-                        <p class="pp">Surname</p>
-                        <p class="error" id="surname_error">*must be at least 3 letters</p>
+                <div class='textbox'>
+                    <div class='subtitle'>
+                        <p class='pp'>Surname</p>
+                        <p class='error' id='surnameerror'>*must be at least 3 letters</p>
                     </div>
-                    <input id="surname" class="input-field" type="text">
-                    <div class="line" id="line_surname"></div>
+                    <input id='surname' class='input-field' type='text'>
+                    <div class='line' id='linesurname'></div>
                 </div>
                 <!-- Email -->
-                <div class="textbox">
-                    <div class="subtitle">
-                        <p class="pp">Email</p>
-                        <p class="error" id="email_error">*invalid email</p>
+                <div class='textbox'>
+                    <div class='subtitle'>
+                        <p class='pp'>Email</p>
+                        <p class='error' id='emailerror'>*invalid email</p>
                     </div>
-                    <input id="email" type="email">
-                    <div class="line" id="line_email"></div>
+                    <input id='email' type='email'>
+                    <div class='line' id='lineemail'></div>
                 </div>
                 <!-- Age -->
-                <div class="textbox">
-                    <div class="subtitle">
-                        <p class="pp">Age</p>
-                        <p class="error" id="age_error">*must be integer between 0 and 100</p>
+                <div class='textbox'>
+                    <div class='subtitle'>
+                        <p class='pp'>Age</p>
+                        <p class='error' id='ageerror'>*must be integer between 0 and 100</p>
                     </div>
-                    <input id="age" type="number" onkeypress='validate(event)'>
-                    <div class="line" id="line_age"></div>
+                    <input id='age' type='number' onkeypress='validate(event)'>
+                    <div class='line' id='lineage'></div>
                 </div>
                 <!-- Sex -->
-                <div class="sex">
-                    <div class="subtitle">
-                        <p class="pp">Sex</p>
-                        <p class="error" id="sex_error">*you must select one</p>
+                <div class='sex'>
+                    <div class='subtitle'>
+                        <p class='pp'>Sex</p>
+                        <p class='error' id='sexerror'>*you must select one</p>
                     </div>
-                    <div class="selectsex">
-                        <label class="textsex">Male
-                            <input name="actionsex" type="radio" class="radiosex" value="Male" id="male">
+                    <div class='selectsex'>
+                        <label class='textsex'>Male
+                            <input name='actionsex' type='radio' class='radiosex' value='Male' id='male'>
                         </label>
-                        <label class="textsex">Female
-                            <input name="actionsex" type="radio" class="radiosex" value="Female" id="female">
+                        <label class='textsex'>Female
+                            <input name='actionsex' type='radio' class='radiosex' value='Female' id='female'>
                         </label>
-                        <label class="textsex">Other
-                            <input name="actionsex" type="radio" class="radiosex" value="Other" id="other">
+                        <label class='textsex'>Other
+                            <input name='actionsex' type='radio' class='radiosex' value='Other' id='other'>
                         </label>
                     </div>
                 </div>
                 <!-- Interest -->
-                <div class="interest">
-                    <div class="subtitle">
-                        <p class="pp">Areas of interest</p>
-                        <p class="error" id="interest_error">*you must select at least one</p>
+                <div class='interest'>
+                    <div class='subtitle'>
+                        <p class='pp'>Areas of interest</p>
+                        <p class='error' id='interesterror'>*you must select at least one</p>
                     </div>
-                    <div class="selectinterest">
-                        <label class="textinterest">Music
-                            <input name="actioninterest" type="checkbox" class="radiointerest" value="music" id="music">
+                    <div class='selectinterest'>
+                        <label class='textinterest'>Music
+                            <input name='actioninterest' type='checkbox' class='radiointerest' value='music' id='music'>
                         </label>
-                        <label class="textinterest">Sports
-                            <input name="actioninterest" type="checkbox" class="radiointerest" value="sports"
-                                id="sports">
+                        <label class='textinterest'>Sports
+                            <input name='actioninterest' type='checkbox' class='radiointerest' value='sports'
+                                id='sports'>
                         </label>
-                        <label class="textinterest">Games
-                            <input name="actioninterest" type="checkbox" class="radiointerest" value="games" id="games">
+                        <label class='textinterest'>Games
+                            <input name='actioninterest' type='checkbox' class='radiointerest' value='games' id='games'>
                         </label>
-                        <label class="textinterest">Tecnology
-                            <input name="actioninterest" type="checkbox" class="radiointerest" value="tecnology"
-                                id="tecnology">
+                        <label class='textinterest'>Tecnology
+                            <input name='actioninterest' type='checkbox' class='radiointerest' value='tecnology'
+                                id='tecnology'>
                         </label>
                     </div>
                 </div>
                 <!-- Country -->
-                <div class="country">
-                    <div class="subtitle">
-                        <p class="pp">Country</p>
-                        <p class="error" id="country_error">*you must select one</p>
+                <div class='country'>
+                    <div class='subtitle'>
+                        <p class='pp'>Country</p>
+                        <p class='error' id='countryerror'>*you must select one</p>
                     </div>
-                    <select id="selectcountry">
-                        <option disabled selected value="nope"> -- select an option -- </option>
-                        <option value="argentina">Argentina</option>
-                        <option value="chile">Chile</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="uruguay">Uruguay</option>
+                    <select id='selectcountry'>
+                        <option disabled selected value='nope'> -- select an option -- </option>
+                        <option value='argentina'>Argentina</option>
+                        <option value='chile'>Chile</option>
+                        <option value='brasil'>Brasil</option>
+                        <option value='uruguay'>Uruguay</option>
                     </select>
-                    <div class="line" id="line_country"></div>
+                    <div class='line' id='linecountry'></div>
                 </div>
                 <!-- Comments -->
-                <div class="textarea">
-                    <div class="subtitle">
-                        <p class="pp">Comments</p>
-                        <p class="error" id="comments_error">*you must to write at least 1 character</p>
+                <div class='textarea'>
+                    <div class='subtitle'>
+                        <p class='pp'>Comments</p>
+                        <p class='error' id='commentserror'>*you must to write at least 1 character</p>
                     </div>
-                    <textarea id="comments" class="comments" rows="10" cols="50"></textarea>
-                    <div class="line" id="line_comments"></div>
+                    <textarea id='comments' class='comments' rows='10' cols='50'></textarea>
+                    <div class='line' id='linecomments'></div>
                 </div>
-                <div class="divbutton">
-                    <button id="sumbitbutton" onclick="sumbit()">
+                <div class='divbutton'>
+                    <button id='sumbitbutton' onclick='sumbit()'>
                         <a>Submit</a>
                     </button>
                 </div>
